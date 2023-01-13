@@ -7,50 +7,9 @@ import java.util.Arrays;
 import java.io.FileWriter;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+        
 
-        //3.1
-        char[] chars1 = {'A','Z','C'};
-        String text = "Hallo WorldZ Cooking A zebrA CaCtus sAndwich";
-        //countChars(text,chars1);
-
-        //3.2
-        //System.out.println(normalize(text));
-
-        //3.3 == 3.1
-        nextCharacter("");
-        //3.4
-        //createFile(text,"text");
-
-        //3.5
-        File file = new File("C:\\Users\\Batu\\Desktop\\text.txt");
-        //countFrequency(file);
-
-        //3.6
-
-        //3.7
-        char[] chars = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-        //System.out.println(highestChar(countChars(normalize(text),chars)));
-
-        //3.8
-       //createFile( hashtoString( histogram( countChars( normalize(text) ,chars ) ) ),"3_8" );
-
-        //3.9
-        File million = new File("C:\\Users\\Batu\\Desktop\\deu_mixed-typical_2011_10K-words.txt");
-
-        //createFile(hashtoString(countChars(normalize(readFromFile(million)),chars)), "3_9");
-        //3.10
-
-
-        //3.11
-
-
-        //3.12
-
-
-    }
-
-    //3.1 for specific undefined amounts of chars
+    //for specific undefined amounts of chars
     public static HashMap<Character,Integer> countChars(String text, char[] chars){
 
         HashMap<Character, Integer> count = new HashMap<Character, Integer>();
@@ -77,7 +36,7 @@ public class Main {
         return count;
     }
 
-    //3.2 all lower case
+    //all lower case
     public static String normalize(String text){
 
         char[] crt = text.toCharArray();
@@ -91,7 +50,7 @@ public class Main {
         return text;
     }
 
-    //3.3
+    
     public static String nextCharacter(String text){
 
         char[] crt = text.replaceAll(" ","").toCharArray();
@@ -105,7 +64,7 @@ public class Main {
 
         return text;
     }
-    //3.4 create file with overwrite and size
+    //create file with overwrite and size
     public static void createFile(String text, String name) throws IOException {
 
             try{
@@ -140,7 +99,7 @@ public class Main {
 
     }
 
-    //3.5
+    
     public static String countFrequency(File file) throws IOException{
         Path path = Paths.get(file.getPath());
         String text = "";
@@ -165,7 +124,7 @@ public class Main {
         return gtext;
     }
 
-    //3.7
+    
     public static String highestChar(HashMap<Character,Integer> con){
         int max = Collections.max(con.values());
         for(Map.Entry<Character,Integer> entry : con.entrySet()){
@@ -175,7 +134,7 @@ public class Main {
         }
         return "Not working";
     }
-    //3.8
+   
     public static HashMap<Character,String> histogram(HashMap<Character,Integer> con){
         HashMap<Character,String> ret = new HashMap<Character,String>();
 
